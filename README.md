@@ -69,4 +69,4 @@ To recreate the results reported in the paper:
 
 ### Example:
 ```python
-DATASET_PATH = "/your/path/to/NewHandPD"
+DATA_ROOT = "/your/path/to/NewHandPD"
