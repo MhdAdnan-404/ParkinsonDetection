@@ -14,6 +14,7 @@ Parkinson’s Disease affects fine motor control, which can be observed in drawi
 While many prior works report high accuracy, they often suffer from **data leakage** due to image-wise evaluation, resulting in overly optimistic performance.
 
 This work addresses that issue by:
+
 - Enforcing **subject-wise evaluation**
 - Using **2×2 image chunking** to capture localized motor irregularities
 - Applying a **two-stage pipeline**:
@@ -43,17 +44,28 @@ Each notebook is **self-contained** and follows the same execution logic.
 
 ## 📊 Dataset
 
-The experiments use the **NewHandPD** dataset, a publicly available Parkinson’s Disease handwriting dataset.
+The experiments use handwriting/drawing datasets that are commonly used for Parkinson’s Disease detection.
 
-The dataset includes hand-drawn:
-- Circles
-- Meanders
-- Spirals  
+### 📂 Dataset Directory
 
-from both Parkinson’s patients and healthy controls.
+This repository includes a **`DataSet/` directory** containing the **well-known HandPD dataset** used for Parkinson’s Disease handwriting analysis.
+
+The dataset consists of hand-drawn:
+
+- **Circles**
+- **Meanders**
+- **Spirals**
+
+from both **Parkinson’s Disease patients** and **healthy control subjects**, and is widely used in the literature for PD detection from drawing tasks.
+
+### 🔗 Original Dataset Source
+
+The original HandPD dataset is publicly available at:
+
+👉 https://wwwp.fc.unesp.br/~papa/pub/datasets/Handpd/
 
 > **Note:**  
-> The dataset is **not included** in this repository and must be downloaded separately.
+> If you prefer to download the dataset directly from the official source, place it inside the `DataSet/` directory, or update the dataset path in the notebooks accordingly.
 
 ---
 
@@ -67,6 +79,8 @@ To recreate the results reported in the paper:
 2. Replace the dataset path with **your local dataset path**
 3. Run the notebook
 
-### Example:
+### Example
+
 ```python
 DATA_ROOT = "/your/path/to/NewHandPD"
+```
